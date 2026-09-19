@@ -1,0 +1,14 @@
+{
+  "name": "lunch-prompt-first-pass-experiment",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "verify": "node verify-first-pass.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.63.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
