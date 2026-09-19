@@ -83,14 +83,20 @@
             box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
         }
         
-        .generate-btn:hover {
+        .generate-btn:enabled:hover {
             background-color: #ff5252;
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(255, 107, 107, 0.5);
         }
         
-        .generate-btn:active {
+        .generate-btn:enabled:active {
             transform: translateY(0);
+        }
+
+        .generate-btn:disabled {
+            opacity: 0.65;
+            cursor: wait;
+            box-shadow: none;
         }
         
         .footer {
@@ -152,24 +158,30 @@
             const foodName = document.querySelector('.food-name');
             const lunchDisplay = document.querySelector('.lunch-display');
             
-            // Array of lunch options with corresponding Font Awesome icons
+            // Font Awesome Free 6.4.0 icons; some are agreed visual approximations.
             const lunchMenu = [
                 { name: "Pizza", icon: "fas fa-pizza-slice" },
                 { name: "Sushi", icon: "fas fa-fish" },
                 { name: "Burger", icon: "fas fa-hamburger" },
                 { name: "Salad", icon: "fas fa-leaf" },
-                { name: "Tacos", icon: "fas fa-utensil-spoon" },
-                { name: "Ramen", icon: "fas fa-bowl-hot" },
+                { name: "Tacos", icon: "fas fa-hotdog" },
+                { name: "Ramen", icon: "fas fa-bowl-food" },
                 { name: "Sandwich", icon: "fas fa-bread-slice" },
-                { name: "Pasta", icon: "fas fa-pasta" },
+                { name: "Pasta", icon: "fas fa-plate-wheat" },
                 { name: "Curry", icon: "fas fa-mortar-pestle" },
-                { name: "Steak", icon: "fas fa-drumstick-bite" },
-                { name: "Soup", icon: "fas fa-bowl" },
+                { name: "Steak", icon: "fas fa-bacon" },
+                { name: "Soup", icon: "fas fa-bowl-food" },
                 { name: "BBQ", icon: "fas fa-fire" }
             ];
             
             // Function to generate random lunch
             function generateRandomLunch() {
+                // Ignore new requests until the current selection is displayed.
+                if (generateBtn.disabled) {
+                    return;
+                }
+                generateBtn.disabled = true;
+
                 // Remove fade-in class if it exists
                 lunchDisplay.classList.remove('fade-in');
                 
@@ -188,6 +200,7 @@
                     
                     // Add animation class
                     lunchDisplay.classList.add('fade-in');
+                    generateBtn.disabled = false;
                 }, 500);
             }
             
