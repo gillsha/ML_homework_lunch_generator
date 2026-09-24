@@ -1,0 +1,7 @@
+node_modules/
+.DS_Store
+__pycache__/
+*.log
+elatontseva_a02_session.json
+generation_session.json
+*.export.tmp

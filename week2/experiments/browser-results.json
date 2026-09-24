@@ -1,0 +1,66 @@
+{
+  "browser": "153.0.8010.12",
+  "executed_at": "2026-09-24T13:09:47.721Z",
+  "cases": [
+    {
+      "implementation": "generated/",
+      "name": "catalogue, duplicate prevention, equality, history, active seed, rapid clicks",
+      "passed": true
+    },
+    {
+      "implementation": "generated/",
+      "name": "unavailable ratings do not block recommendations",
+      "passed": true
+    },
+    {
+      "implementation": "generated/",
+      "name": "missing catalogue gives error and disables controls",
+      "passed": true
+    },
+    {
+      "implementation": "generated/",
+      "name": "empty/short results and untrusted titles rendered as text",
+      "passed": true
+    },
+    {
+      "implementation": "generated/",
+      "name": "mobile layout and keyboard selection",
+      "passed": true
+    },
+    {
+      "implementation": "generated/",
+      "name": "delayed ratings, state color and selection error preservation",
+      "passed": true
+    },
+    {
+      "implementation": "maintained",
+      "name": "catalogue, duplicate prevention, equality, history, active seed, rapid clicks",
+      "passed": true
+    },
+    {
+      "implementation": "maintained",
+      "name": "unavailable ratings do not block recommendations",
+      "passed": true
+    },
+    {
+      "implementation": "maintained",
+      "name": "delayed ratings, state color and selection error preservation",
+      "passed": true
+    },
+    {
+      "implementation": "maintained",
+      "name": "missing catalogue gives error and disables controls",
+      "passed": true
+    },
+    {
+      "implementation": "maintained",
+      "name": "empty/short results and untrusted titles rendered as text",
+      "passed": true
+    },
+    {
+      "implementation": "maintained",
+      "name": "mobile layout and keyboard selection",
+      "passed": true
+    }
+  ]
+}

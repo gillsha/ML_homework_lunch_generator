@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "catalogue_records_equal": 1682,
+  "single_movie_queries_equal": 1682,
+  "real_history_profiles_equal": 93,
+  "score_tolerance": 1e-12,
+  "generated_source_hashes_unchanged": true,
+  "prompt_hash_matches_generation_input": true
+}

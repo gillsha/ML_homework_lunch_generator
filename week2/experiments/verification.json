@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "checked_user_method_rows": 279,
+  "evaluated_users": 93,
+  "independent_runtime": "Python standard library",
+  "checks": [
+    "Temporal split and catalogue eligibility",
+    "Last three positive history films",
+    "Exclusion of all seen films",
+    "Relevance sets",
+    "All saved per-user metrics",
+    "Macro averages and coverage"
+  ]
+}

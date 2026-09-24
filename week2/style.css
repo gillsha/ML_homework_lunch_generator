@@ -1,101 +1,41 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Helvetica', 'Arial', sans-serif;
-    background-color: #f4f7f6;
-    color: #333;
-    line-height: 1.6;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-.container {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    width: 90%;
-    max-width: 600px;
-}
-
-h1 {
-    text-align: center;
-    margin-bottom: 15px;
-    color: #2c3e50;
-}
-
-p {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #7f8c8d;
-}
-
-.controls {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-bottom: 25px;
-}
-
-#movie-select {
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-    background-color: #f9f9f9;
-    transition: border-color 0.3s;
-}
-
-#movie-select:focus {
-    border-color: #3498db;
-    outline: none;
-}
-
-#recommend-btn {
-    padding: 12px 20px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-#recommend-btn:hover {
-    background-color: #2980b9;
-}
-
-#result-box {
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 5px;
-    border-left: 4px solid #3498db;
-}
-
-#result {
-    font-weight: bold;
-    color: #2c3e50;
-    text-align: left;
-    margin: 0;
-}
-
-.loading {
-    color: #7f8c8d;
-    font-style: italic;
-}
-
-.error {
-    color: #e74c3c;
-}
-
-.success {
-    color: #27ae60;
+:root { color-scheme: light; font-family: system-ui, -apple-system, sans-serif; color: #182c36; background: #edf3f3; }
+* { box-sizing: border-box; }
+body { margin: 0; padding: 32px 20px; }
+.container { max-width: 1100px; margin: auto; }
+header { max-width: 780px; margin-bottom: 28px; }
+h1 { font-size: clamp(2rem, 5vw, 3rem); line-height: 1.12; letter-spacing: -.04em; margin: 12px 0; }
+h2 { font-size: 1.2rem; margin-top: 0; }
+h2 span { font-size: .8rem; font-weight: 500; color: #536a73; margin-left: 8px; }
+p { line-height: 1.55; }
+.eyebrow { color: #17665e; font-size: .72rem; font-weight: 750; letter-spacing: .12em; }
+.selection, .panel { padding: 24px; border: 1px solid #d6e3e2; border-radius: 16px; background: #fff; }
+label { font-weight: 600; }
+.controls { display: flex; gap: 12px; margin: 8px 0 16px; }
+select { flex: 1; min-width: 0; width: 100%; }
+button, select { font: inherit; padding: 11px 14px; border: 1px solid #b7ccca; border-radius: 8px; }
+button { background: #17665e; color: white; cursor: pointer; font-weight: 600; }
+button:hover:not(:disabled) { background: #104e48; }
+button:disabled { opacity: .5; cursor: not-allowed; }
+:focus-visible { outline: 3px solid #d58c23; outline-offset: 3px; }
+#history { list-style: none; padding: 0; }
+#history li { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid #e4eceb; }
+#history label { display: flex; align-items: center; gap: 8px; min-width: 0; overflow-wrap: anywhere; }
+#history button { background: #f0f5f4; color: #244f4a; font-size: .82rem; }
+#status { font-weight: 650; margin-bottom: 6px; }
+#status.error { color: #a82532; }
+#status.success { color: #17665e; }
+#status.loading { color: #526770; }
+#metadata-status, #profile-summary { font-size: .85rem; color: #536a73; }
+.comparison { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin-top: 20px; }
+.panel-note { color: #536a73; font-size: .9rem; }
+.movie-card { padding: 15px 0; border-top: 1px solid #e3eceb; overflow-wrap: anywhere; }
+.movie-card h3 { font-size: 1rem; margin: 0 0 6px; }
+.movie-card p { font-size: .82rem; margin: 5px 0; color: #4c626a; }
+.movie-card .score { color: #17665e; font-weight: 700; }
+footer { color: #536a73; font-size: .8rem; margin: 24px 4px; }
+@media (max-width: 640px) {
+    body { padding: 20px 12px; }
+    .selection, .panel { padding: 18px; }
+    .comparison { grid-template-columns: 1fr; }
+    .controls { flex-direction: column; }
 }

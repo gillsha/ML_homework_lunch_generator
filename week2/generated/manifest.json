@@ -1,0 +1,32 @@
+{
+  "status": "passed shared unit/browser contracts and exhaustive single-movie conformance",
+  "model": "openai/gpt-6-astra",
+  "started_at": "2026-09-24T13:00:13.290Z",
+  "prompt_sha256": "ad7b5ff3864355369259ee94eb41a713fb52ca0b8c73ae7d223a02f1abdcd74f",
+  "inputs_sha256": {
+    "u.item": "553841ebc7de3a0fd0d6b62a204ea30c1e651aacfb2814c7a6584ac52f2c5701",
+    "u.data": "06416e597f82b7342361e41163890c81036900f418ad91315590814211dca490"
+  },
+  "method": "Fresh OpenCode session in an isolated temporary directory; prompt and raw datasets only.",
+  "manual_source_edits": false,
+  "command": "opencode run --pure --dir <isolated-output> --model openai/gpt-6-astra --format json <generation instruction>",
+  "exit_code": 0,
+  "finished_at": "2026-09-24T13:05:04.975Z",
+  "session_id": "ses_f2c7f6cfbffewv3CZaGzNy7EQk",
+  "files_sha256": {
+    "index.html": "b2f6372886c4a309f27bad0515cf0a752ce7121c3bb71168e912233dc2bf8a78",
+    "style.css": "ce63d6d17ad0514e3f7b52f017f654bc118c81607b5e20af710399b65b864f00",
+    "data.js": "18f74b903576ed3233d70f791a2b6f0fadaa79ed73f2c080f5ad238c6a102458",
+    "recommender.js": "98af091cd878a46cf8a5b5a7ebf5859b2c4790b06c31faa59a3612899cac1d83",
+    "script.js": "3cbbb2e1d4cd1f92b4880910f8c1e5cc0bc6cbfc6e9cd791aafe44289bb2f43c"
+  },
+  "verification": {
+    "passed": true,
+    "catalogue_records_equal": 1682,
+    "single_movie_queries_equal": 1682,
+    "real_history_profiles_equal": 93,
+    "score_tolerance": 1e-12,
+    "generated_source_hashes_unchanged": true,
+    "prompt_hash_matches_generation_input": true
+  }
+}
