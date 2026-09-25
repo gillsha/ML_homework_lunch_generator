@@ -1,8 +1,15 @@
 # Movie Recommender System — reproducible generation prompt
 
-The text below is the complete application-generation prompt. The maintained
-application lives beside this file; an independently generated implementation
-lives in `generated/`. See `RUNNING.md` for verification and experiment commands.
+This homework compares cosine recommendations from one active movie with a
+profile averaged from 1–3 liked movies. Both modes show up to five unseen matches.
+
+Run `python3 -m http.server 8000` from the repository root, then open:
+- Updated app: http://localhost:8000/week2/
+- App independently generated from the prompt below: http://localhost:8000/week2/generated/
+
+Both versions share `u.item` and `u.data`. No npm installation or build is needed.
+The PDF report and conversation export are local submission files, kept in the
+ignored `.local/` folder. The text below is the application-generation prompt.
 
 ---
 
